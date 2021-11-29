@@ -1,10 +1,21 @@
 import React from "react";
 import Header from "./components/Header";
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
 function App() {
     return (
     <div>
         <Header />
+        <Router>
+            <Switch>
+                <Route exact path="/">
+                    <h1>Customize</h1>
+                </Route>
+                <Route path="/checkout">
+                    <h1>Checkout</h1>
+                </Route>
+            </Switch>
+        </Router>
     </div>
     );
 }
