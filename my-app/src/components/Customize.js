@@ -11,8 +11,55 @@ export default function Customize() {
     return(
         <div style={{display: "flex"}}>
             <div style={{border: "2px solid black", flex: 1}}>
-                <div style={{minHeight: 500}}>
-                    <img src={Base} alt="Pizza Base" />
+                <div style={{maxHeight: 500, maxWidth: 500, position:"relative"}}>
+                    <img
+                      src={Base}
+                      alt="Pizza Base" 
+                      height="100%" 
+                      width="100%" 
+                    />
+                    <img
+                      src={Cheese}
+                      alt="Pizza Base" 
+                      height="100%" 
+                      width="100%" 
+                      className="ingredients" 
+                    />
+                    <img
+                      src={Olive} 
+                      alt="Pizza Base" 
+                      height="100%" 
+                      width="100%" 
+                      className="ingredients" 
+                    />
+                    <img
+                      src={Pineapple} 
+                      alt="Pizza Base" 
+                      height="100%" 
+                      width="100%" 
+                      className="ingredients" 
+                    />
+                    <img
+                      src={Mushroom} 
+                      alt="Pizza Base" 
+                      height="100%" 
+                      width="100%" 
+                      className="ingredients" 
+                    />
+                    <img
+                      src={Basil} 
+                      alt="Pizza Base" 
+                      height="100%" 
+                      width="100%" 
+                      className="ingredients" 
+                    />
+                    <img 
+                      src={Tomato} 
+                      alt="Pizza Base" 
+                      height="100%" 
+                      width="100%" 
+                      className="ingredients" 
+                    />
                 </div>
             </div>
             <div style={{border: "2px solid black", flex: 1}}>
