@@ -19,7 +19,10 @@ function App() {
         <Router>
             <Switch>
                 <Route exact path="/">
-                    <Customize ingredients={ingredients}/>
+                    <Customize
+                      ingredients={ingredients}
+                      setIngredients={setIngredients}
+                      />
                 </Route>
                 <Route path="/checkout">
                     <h1>Checkout</h1>

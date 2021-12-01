@@ -7,7 +7,15 @@ import Mushroom from "../assets/Mushroom.png";
 import Basil from "../assets/Basil.png";
 import Tomato from "../assets/Tomato.png";
 
-export default function Customize({ingredients}) {
+export default function Customize({ingredients,setIngredients}) {
+
+    const changeIngredients = (name) => {
+        let newIngredients = JSON.parse(JSON.stringify(ingredients));
+        /* Toggle that ingredient */
+        newIngredients[name] = !newIngredients[name]
+        setIngredients(newIngredients);
+    }
+
     return(
         <div style={{display: "flex" }}>
             {JSON.stringify(ingredients)}
@@ -65,7 +73,8 @@ export default function Customize({ingredients}) {
                 </div>
             </div>
             <div style={{border: "2px solid black", flex: 1}}>
-                Checkbox
+                <input type="checkbox" id="pineapple" name="pineapple" value="pineapple" onChange={()=> changeIngredients('pineapple')} />
+                <label for="pineapple">Pineapple</label>
             </div>
         </div>
     )
