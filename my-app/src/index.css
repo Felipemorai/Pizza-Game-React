@@ -45,7 +45,7 @@ body {
   /* When the checkbox is checked, add a blue background */
   .container-checkbox input:checked ~ .checkmark {
     background-color: #fccd3d;
-
+  }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .container-radio .checkmark:after {

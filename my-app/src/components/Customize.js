@@ -74,23 +74,65 @@ export default function Customize({ingredients,setIngredients}) {
                 </div>
             </div>
             <div style={{border: "2px solid black", flex: 1}}>
-                <input
-                  type="checkbox" 
-                  id="pineapple" 
-                  name="pineapple" 
-                  value="pineapple" 
-                  onChange={()=> changeIngredients('pineapple')} 
-                />
-                <label for="pineapple">Pineapple</label>
-
+            <label class="container-checkbox">
+                Pineapple
                 <input
                   type="checkbox"
-                  id="tomato"
-                  name="tomato"
-                  value="tomato"
-                  onChange={()=> changeIngredients('tomato')}
+                  checked={ingredients["pineapple"]}
+                  onChange={(event) => changeIngredients(event.currentTarget.checked, "pineapple")
+                }
                 />
-                <lanel for="tomato">Tomato</lanel>
+                <span className="checkmark"></span>
+            </label>
+            <label class="container-checkbox">
+                Basil
+                <input
+                  type="checkbox"
+                  checked={ingredients["basil"]}
+                  onChange={(event) => changeIngredients(event.currentTarget.checked, "basil")
+                }
+                />
+                <span className="checkmark"></span>
+            </label>
+            <label class="container-checkbox">
+                Olive
+                <input
+                  type="checkbox"
+                  checked={ingredients["olive"]}
+                  onChange={(event) => changeIngredients(event.currentTarget.checked, "olive")
+                }
+                />
+                <span className="checkmark"></span>
+            </label>
+            <label class="container-checkbox">
+                Tomato
+                <input
+                  type="checkbox"
+                  checked={ingredients["tomato"]}
+                  onChange={(event) => changeIngredients(event.currentTarget.checked, "tomato")
+                }
+                />
+                <span className="checkmark"></span>
+            </label>
+            <label class="container-checkbox">
+                Mushroom
+                <input
+                  type="checkbox"
+                  checked={ingredients["mushroom"]}
+                  onChange={(event) => changeIngredients(event.currentTarget.checked, "mushroom")
+                }
+                />
+                <span className="checkmark"></span>
+            </label>
+            <label className="container-checkbox">
+              Cheese
+              <input
+                type="checkbox"
+                checked={ingredients["cheese"]}
+                onChange={()=> changeIngredients('cheese')}
+              />
+              <span className="checkmark"></span>
+            </label>
             </div>
         </div>
     )
