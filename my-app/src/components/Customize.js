@@ -9,12 +9,13 @@ import Tomato from "../assets/Tomato.png";
 
 export default function Customize({ingredients,setIngredients}) {
 
-    const changeIngredients = (name) => {
+    const changeIngredients = (event,name) => {
+        /* Console.log(localStorage); */
         let newIngredients = JSON.parse(JSON.stringify(ingredients));
         /* Toggle that ingredient */
-        newIngredients[name] = !newIngredients[name]
+        newIngredients[name] = event;
         setIngredients(newIngredients);
-    }
+    };
 
     return(
         <div style={{display: "flex" }}>
@@ -73,8 +74,23 @@ export default function Customize({ingredients,setIngredients}) {
                 </div>
             </div>
             <div style={{border: "2px solid black", flex: 1}}>
-                <input type="checkbox" id="pineapple" name="pineapple" value="pineapple" onChange={()=> changeIngredients('pineapple')} />
+                <input
+                  type="checkbox" 
+                  id="pineapple" 
+                  name="pineapple" 
+                  value="pineapple" 
+                  onChange={()=> changeIngredients('pineapple')} 
+                />
                 <label for="pineapple">Pineapple</label>
+
+                <input
+                  type="checkbox"
+                  id="tomato"
+                  name="tomato"
+                  value="tomato"
+                  onChange={()=> changeIngredients('tomato')}
+                />
+                <lanel for="tomato">Tomato</lanel>
             </div>
         </div>
     )
