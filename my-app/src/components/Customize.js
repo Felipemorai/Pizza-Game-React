@@ -129,7 +129,8 @@ export default function Customize({ingredients,setIngredients}) {
               <input
                 type="checkbox"
                 checked={ingredients["cheese"]}
-                onChange={()=> changeIngredients('cheese')}
+                onChange={(event) => changeIngredients(event.currentTarget.checked, "cheese")
+              }
               />
               <span className="checkmark"></span>
             </label>
