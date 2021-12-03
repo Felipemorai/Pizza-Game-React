@@ -19,7 +19,7 @@ export default function Customize({ingredients,setIngredients}) {
 
     return(
         <div style={{display: "flex" }}>
-            {JSON.stringify(ingredients)}
+            
             <div style={{border: "2px solid black", flex: 1}}>
                 <div style={{maxHeight: 500, maxWidth: 500, position:"relative"}}>
                    
