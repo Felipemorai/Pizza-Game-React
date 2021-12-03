@@ -135,6 +135,7 @@ export default function Customize({ingredients,setIngredients}) {
               <span className="checkmark"></span>
             </label>
             </div>
+          {JSON.stringify(ingredients)}
         </div>
-    )
+    );
 }
