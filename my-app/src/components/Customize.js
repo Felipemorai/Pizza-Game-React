@@ -6,7 +6,7 @@ import Pineapple from "../assets/Pineapple.png";
 import Mushroom from "../assets/Mushroom.png";
 import Basil from "../assets/Basil.png";
 import Tomato from "../assets/Tomato.png";
-import { Frame, useMotionValue, useTransform } from "framer-motion"
+import { motion } from "framer-motion";
 
 export default function Customize({ingredients,setIngredients}) {
 
@@ -58,7 +58,7 @@ export default function Customize({ingredients,setIngredients}) {
                             y: ingredients["basil"] ? 100 : -100,
                             opacity: ingredients["basil"] ? 1 : 0,
                         }}
-                        transition={{duration: 1 }}
+                        transition={{duration: 0.5 }}
                         className="ingredients"
                     >
                       <img src={Basil} alt="Pizza Base" height="100%" width="100%" />
