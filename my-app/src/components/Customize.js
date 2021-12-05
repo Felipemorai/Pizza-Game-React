@@ -6,7 +6,7 @@ import Pineapple from "../assets/Pineapple.png";
 import Mushroom from "../assets/Mushroom.png";
 import Basil from "../assets/Basil.png";
 import Tomato from "../assets/Tomato.png";
-import { motion } from 'framer-motion';
+import { Frame, useMotionValue, useTransform } from "framer-motion"
 
 export default function Customize({ingredients,setIngredients}) {
 
