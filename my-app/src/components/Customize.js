@@ -24,13 +24,14 @@ export default function Customize({ingredients,setIngredients}) {
             <div style={{border: "2px solid black", flex: 1}}>
                 <div style={{maxHeight: 500, maxWidth: 500, position:"relative"}}>
                     <motion.div
-                        initial={{opacity: 0}}
+                        initial={{scale: 0}}
                         animate={{
-                            y: ingredients["cheese"] ? 100 : -100,
-                            opacity: ingredients["cheese"] ? 1 : 0,
+                            //y: ingredients["cheese"] ? 100 : -100,
+                            //opacity: ingredients["cheese"] ? 1 : 0,
+                            scale: ingredients["cheese"] ? 1 : 0,
                         }}
-                        transition={{duration: 0.5 }}
-                        className="ingredients"
+                        transition={{duration: 0.3 }}
+                        className="cheese z1"
                     >
                     <img src={Cheese} alt="Pizza Base" height="100%" width="100%" />
                     </motion.div>
@@ -40,8 +41,8 @@ export default function Customize({ingredients,setIngredients}) {
                             y: ingredients["olive"] ? 100 : -100,
                             opacity: ingredients["olive"] ? 1 : 0,
                         }}
-                        transition={{duration: 0.5 }}
-                        className="ingredients"
+                        transition={{duration: 1 }}
+                        className="ingredients z4"
                     >
                     <img src={Olive} alt="Pizza Base" height="100%" width="100%" />
                     </motion.div>
@@ -51,8 +52,8 @@ export default function Customize({ingredients,setIngredients}) {
                             y: ingredients["pineapple"] ? 100 : -100,
                             opacity: ingredients["pineapple"] ? 1 : 0,
                         }}
-                        transition={{duration: 0.5 }}
-                        className="ingredients"
+                        transition={{duration: 1 }}
+                        className="ingredients z3"
                     >
                     <img src={Pineapple} alt="Pizza Base" height="100%" width="100%" />
                     </motion.div>
@@ -62,8 +63,8 @@ export default function Customize({ingredients,setIngredients}) {
                             y: ingredients["mushroom"] ? 100 : -100,
                             opacity: ingredients["mushroom"] ? 1 : 0,
                         }}
-                        transition={{duration: 0.5 }}
-                        className="ingredients"
+                        transition={{duration: 1 }}
+                        className="ingredients z4"
                     >
                     <img src={Mushroom} alt="Pizza Base" height="100%" width="100%" />
                     </motion.div>
@@ -73,8 +74,8 @@ export default function Customize({ingredients,setIngredients}) {
                             y: ingredients["basil"] ? 100 : -100,
                             opacity: ingredients["basil"] ? 1 : 0,
                         }}
-                        transition={{duration: 0.5 }}
-                        className="ingredients"
+                        transition={{duration: 1 }}
+                        className="ingredients z4"
                     >
                       <img src={Basil} alt="Pizza Base" height="100%" width="100%" />
                     </motion.div>
@@ -85,7 +86,7 @@ export default function Customize({ingredients,setIngredients}) {
                             opacity: ingredients["tomato"] ? 1 : 0,
                         }}
                         transition={{duration: 0.5 }}
-                        className="ingredients"
+                        className="ingredients z4"
                     >
                       <img src={Tomato} alt="Pizza Base" height="100%" width="100%"  />
                     </motion.div>
