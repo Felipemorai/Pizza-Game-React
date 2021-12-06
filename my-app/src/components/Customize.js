@@ -167,7 +167,7 @@ export default function Customize({ingredients,setIngredients}) {
             </button>
             </div>
           
-          {JSON.stringify(ingredients)}
+            
         </div>
     );
 }
