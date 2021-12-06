@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./components/Header";
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import Customize from "./components/Customize";
+import Checkout from "./components/Checkout";
 
 function App() {
     const [ingredients, setIngredients] = useState ({
@@ -25,7 +26,7 @@ function App() {
                       />
                 </Route>
                 <Route path="/checkout">
-                    <h1>Checkout</h1>
+                    <Checkout ingredients={ingredients} />
                 </Route>
             </Switch>
         </Router>
