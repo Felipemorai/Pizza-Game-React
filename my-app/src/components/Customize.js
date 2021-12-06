@@ -23,35 +23,50 @@ export default function Customize({ingredients,setIngredients}) {
             
             <div style={{border: "2px solid black", flex: 1}}>
                 <div style={{maxHeight: 500, maxWidth: 500, position:"relative"}}>
-                   
-                    <img
-                      src={Cheese}
-                      alt="Pizza Base" 
-                      height="100%" 
-                      width="100%" 
-                      className="ingredients" 
-                    />
-                    <img
-                      src={Olive} 
-                      alt="Pizza Base" 
-                      height="100%" 
-                      width="100%" 
-                      className="ingredients" 
-                    />
-                    <img
-                      src={Pineapple} 
-                      alt="Pizza Base" 
-                      height="100%" 
-                      width="100%" 
-                      className="ingredients" 
-                    />
-                    <img
-                      src={Mushroom} 
-                      alt="Pizza Base" 
-                      height="100%" 
-                      width="100%" 
-                      className="ingredients" 
-                    />
+                    <motion.div
+                        initial={{opacity: 0}}
+                        animate={{
+                            y: ingredients["cheese"] ? 100 : -100,
+                            opacity: ingredients["cheese"] ? 1 : 0,
+                        }}
+                        transition={{duration: 0.5 }}
+                        className="ingredients"
+                    >
+                    <img src={Cheese} alt="Pizza Base" height="100%" width="100%" />
+                    </motion.div>
+                    <motion.div
+                        initial={{opacity: 0}}
+                        animate={{
+                            y: ingredients["olive"] ? 100 : -100,
+                            opacity: ingredients["olive"] ? 1 : 0,
+                        }}
+                        transition={{duration: 0.5 }}
+                        className="ingredients"
+                    >
+                    <img src={Olive} alt="Pizza Base" height="100%" width="100%" />
+                    </motion.div>
+                    <motion.div
+                        initial={{opacity: 0}}
+                        animate={{
+                            y: ingredients["pineapple"] ? 100 : -100,
+                            opacity: ingredients["pineapple"] ? 1 : 0,
+                        }}
+                        transition={{duration: 0.5 }}
+                        className="ingredients"
+                    >
+                    <img src={Pineapple} alt="Pizza Base" height="100%" width="100%" />
+                    </motion.div>
+                    <motion.div
+                        initial={{opacity: 0}}
+                        animate={{
+                            y: ingredients["mushroom"] ? 100 : -100,
+                            opacity: ingredients["mushroom"] ? 1 : 0,
+                        }}
+                        transition={{duration: 0.5 }}
+                        className="ingredients"
+                    >
+                    <img src={Mushroom} alt="Pizza Base" height="100%" width="100%" />
+                    </motion.div>
                      <motion.div
                         initial={{opacity: 0}}
                         animate={{
@@ -63,13 +78,17 @@ export default function Customize({ingredients,setIngredients}) {
                     >
                       <img src={Basil} alt="Pizza Base" height="100%" width="100%" />
                     </motion.div>
-                    <img 
-                      src={Tomato} 
-                      alt="Pizza Base" 
-                      height="100%" 
-                      width="100%" 
-                      className="ingredients" 
-                    />
+                    <motion.div
+                        initial={{opacity: 0}}
+                        animate={{
+                            y: ingredients["tomato"] ? 100 : -100,
+                            opacity: ingredients["tomato"] ? 1 : 0,
+                        }}
+                        transition={{duration: 0.5 }}
+                        className="ingredients"
+                    >
+                      <img src={Tomato} alt="Pizza Base" height="100%" width="100%"  />
+                    </motion.div>
                     <img
                       src={Base}
                       alt="Pizza Base" 
