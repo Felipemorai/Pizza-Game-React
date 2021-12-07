@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
+
 
 export default function Checkout({ ingredients }) {
     const history = useHistory();
@@ -23,12 +24,24 @@ export default function Checkout({ ingredients }) {
                 <button onClick={()=>setSuccess(true)}>
                     Confirm
                 </button>
-                <button onClick={()=>}>
+                <button onClick={()=>history.push("/")}>
                     Go Back
                 </button>
             </div>
         </div>
-        <div>Success</div>
+        <div>
+            {success && (
+                <div style={{ textAlign: "center" }}>
+                    <img src={Pizzaman} alt="pizzaman" height="300px" />
+                    <div style={{ fontFamily: "Open Sans Condensed", fontsize: 35}}>
+                        We have received your order, Thank you
+                    </div>
+                    <div style={{ fontFamily: "Comfortaa "}}>
+                        
+                    </div>
+                </div>
+            )}
+        </div>
     </div>
   );
 }
