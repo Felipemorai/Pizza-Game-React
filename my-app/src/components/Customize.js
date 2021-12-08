@@ -10,21 +10,20 @@ import { motion } from "framer-motion";
 import { useHistory } from "react-router-dom";
 
 export default function Customize({ingredients,setIngredients}) {
-
     let history = useHistory();
         
     const changeIngredients = (event,name) => {
-        /* Console.log(localStorage); */
+        //Console.log(localStorage); 
         let newIngredients = JSON.parse(JSON.stringify(ingredients));
         /* Toggle that ingredient */
         newIngredients[name] = event;
         setIngredients(newIngredients);
+        //localStorage.setItem("ingredients", JSON.stringify(newIngredients));
     };
 
     return(
         <div style={{display: "flex" }}>
-            
-            <div style={{border: "2px solid black", flex: 1}}>
+            <div style={{ padding: 40, flex: 1 }}>
                 <div style={{maxHeight: 500, maxWidth: 500, position:"relative"}}>
                     <motion.div
                         initial={{scale: 0}}
@@ -101,7 +100,7 @@ export default function Customize({ingredients,setIngredients}) {
                     />
                 </div>
             </div>
-            <div style={{border: "2px solid black", flex: 1}}>
+            <div style={{ padding: 40, flex: 1}}>
             <label class="container-checkbox">
                 Pineapple
                 <input
@@ -162,7 +161,9 @@ export default function Customize({ingredients,setIngredients}) {
               />
               <span className="checkmark"></span>
             </label>
-            <button onClick={()=>history.push('/checkout')}>
+            <button onClick={()=>history.push('/checkout')}
+              className="proceedToCheckout"
+              >
                 Proceed to Checkout
             </button>
             </div>
